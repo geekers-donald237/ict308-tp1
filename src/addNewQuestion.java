@@ -1,17 +1,9 @@
 import java.sql.* ;
-import Project.ConnectionProvider ;
+import Project.DatabaseConnection;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 
-/**
- *
- * @author daulw
- */
 public class addNewQuestion extends javax.swing.JFrame {
 
     /**
@@ -21,7 +13,7 @@ public class addNewQuestion extends javax.swing.JFrame {
         initComponents();
         
         try{
-            Connection con = ConnectionProvider.getCon();
+            Connection con = DatabaseConnection.getCon();
             Statement st =  con.createStatement( ResultSet.TYPE_SCROLL_INSENSITIVE,
                         ResultSet.CONCUR_READ_ONLY) ;
             ResultSet rs = st.executeQuery("select count(id) from questions") ;
@@ -207,7 +199,7 @@ public class addNewQuestion extends javax.swing.JFrame {
         String answer = jTextField6.getText();
         
         try{
-            Connection con =  ConnectionProvider.getCon();
+            Connection con =  DatabaseConnection.getCon();
             PreparedStatement ps  = con.prepareStatement("insert into questions values(?,?,?,?,?,?,?)") ;
             ps.setString(1, id);
             ps.setString(2, name);

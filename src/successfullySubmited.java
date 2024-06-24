@@ -5,7 +5,7 @@
 
 /**
  *
- * @author daulw
+ * @author geekers idris 237
  */
 public class successfullySubmited extends javax.swing.JFrame {
 

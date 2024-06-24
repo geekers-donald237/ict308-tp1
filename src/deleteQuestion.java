@@ -1,5 +1,5 @@
 import java.sql.* ;
-import Project.ConnectionProvider ;
+import Project.DatabaseConnection;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author daulw
+ * @author idriss
  */
 public class deleteQuestion extends javax.swing.JFrame {
 
@@ -264,7 +264,7 @@ public class deleteQuestion extends javax.swing.JFrame {
         String id = jTextField1.getText() ;
         try{
         
-            Connection con =ConnectionProvider.getCon();
+            Connection con = DatabaseConnection.getCon();
             
             Statement st = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
                         ResultSet.CONCUR_READ_ONLY) ;
@@ -315,7 +315,7 @@ public class deleteQuestion extends javax.swing.JFrame {
          try{
          
    
-         Connection con =  ConnectionProvider.getCon();
+         Connection con =  DatabaseConnection.getCon();
             PreparedStatement ps  = con.prepareStatement(" delete from questions where id=?") ;
           
             ps.setString(1, id);

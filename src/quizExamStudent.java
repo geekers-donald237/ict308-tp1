@@ -1,6 +1,6 @@
 import java.awt.event.ActionEvent ;
 import java.awt.event.ActionListener ;
-import Project.ConnectionProvider ;
+import Project.DatabaseConnection;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -17,7 +17,7 @@ import javax.swing.Timer ;
 
 /**
  *
- * @author daulw
+ * @author geekers donald 237
  */
 public class quizExamStudent extends javax.swing.JFrame {
     
@@ -101,7 +101,7 @@ public class quizExamStudent extends javax.swing.JFrame {
     public void question(){
     
         try{
-             Connection con = ConnectionProvider.getCon() ;
+             Connection con = DatabaseConnection.getCon() ;
             Statement st = con.createStatement( ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY) ;
          ResultSet rsl = st.executeQuery("select * from questions where id='"+questionId+"'") ;
          
@@ -138,7 +138,7 @@ public class quizExamStudent extends javax.swing.JFrame {
         
         try{
         
-        Connection con = ConnectionProvider.getCon() ;
+        Connection con = DatabaseConnection.getCon() ;
         Statement st = con.createStatement() ;
         st.executeUpdate("update students set marks='"+marks+"' where rollNo='"+rollNo+"' ") ;
         
@@ -184,7 +184,7 @@ public class quizExamStudent extends javax.swing.JFrame {
         
         //first question and student details
          try{
-             Connection con = ConnectionProvider.getCon() ;
+             Connection con = DatabaseConnection.getCon() ;
             Statement st = con.createStatement( ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY) ;
             ResultSet rs = st.executeQuery("select * from students where rollNo='"+rollNo+"'") ;
          

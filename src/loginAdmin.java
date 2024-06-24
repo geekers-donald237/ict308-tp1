@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author daulw
+ * @author geekers donald 237
  */
 public class loginAdmin extends javax.swing.JFrame {
 
@@ -125,7 +125,7 @@ public class loginAdmin extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-         if(jTextField1.getText().equals("qems") && jPasswordField3.getText().equals("admin")){
+         if(jTextField1.getText().equals("idrisdonald") && jPasswordField3.getText().equals("ict308")){
             setVisible(false);
             new adminHome().setVisible(true);
         } else {

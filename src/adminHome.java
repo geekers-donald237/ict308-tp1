@@ -1,17 +1,17 @@
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
+import javax.swing.*;
+import java.util.Objects;
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
 /**
- *
- * @author daulw
+ * @author idriss
  */
 public class adminHome extends javax.swing.JFrame {
 
-    public  static int open = 0 ; 
+    public static int open = 0;
+
     /**
      * Creates new form adminHome
      */
@@ -42,13 +42,12 @@ public class adminHome extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/index background.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(Objects.requireNonNull(getClass().getResource("/index background.png"))));
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 720));
 
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add new question.png"))); // NOI18N
-        jMenu1.setText("Add New Question");
-        jMenu1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jMenu1.setText("Add  Question");
+        jMenu1.setFont(new java.awt.Font("Segoe UI", 1, 14));
         jMenu1.setMargin(new java.awt.Insets(0, 5, 0, 30));
         jMenu1.setMaximumSize(new java.awt.Dimension(237, 32767));
         jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -63,9 +62,8 @@ public class adminHome extends javax.swing.JFrame {
         });
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Update Question.png"))); // NOI18N
         jMenu2.setText("Update Question");
-        jMenu2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jMenu2.setFont(new java.awt.Font("Segoe UI", 1, 14));
         jMenu2.setMargin(new java.awt.Insets(0, 5, 0, 30));
         jMenu2.setMaximumSize(new java.awt.Dimension(237, 32767));
         jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -75,9 +73,8 @@ public class adminHome extends javax.swing.JFrame {
         });
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/all questions.png"))); // NOI18N
         jMenu3.setText("All Question");
-        jMenu3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jMenu3.setFont(new java.awt.Font("Segoe UI", 1, 14));
         jMenu3.setMargin(new java.awt.Insets(0, 5, 0, 30));
         jMenu3.setMaximumSize(new java.awt.Dimension(237, 32767));
         jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -87,9 +84,8 @@ public class adminHome extends javax.swing.JFrame {
         });
         jMenuBar1.add(jMenu3);
 
-        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/delete Question.png"))); // NOI18N
         jMenu4.setText("Delete Question");
-        jMenu4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jMenu4.setFont(new java.awt.Font("Segoe UI", 1, 14));
         jMenu4.setMargin(new java.awt.Insets(0, 5, 0, 30));
         jMenu4.setMaximumSize(new java.awt.Dimension(237, 32767));
         jMenu4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -98,10 +94,8 @@ public class adminHome extends javax.swing.JFrame {
             }
         });
         jMenuBar1.add(jMenu4);
-
-        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/all student result.png"))); // NOI18N
         jMenu5.setText("All Student  Result");
-        jMenu5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jMenu5.setFont(new java.awt.Font("Segoe UI", 1, 14));
         jMenu5.setMargin(new java.awt.Insets(0, 5, 0, 30));
         jMenu5.setMaximumSize(new java.awt.Dimension(237, 32767));
         jMenu5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -111,9 +105,8 @@ public class adminHome extends javax.swing.JFrame {
         });
         jMenuBar1.add(jMenu5);
 
-        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Logout.png"))); // NOI18N
         jMenu6.setText("Logout");
-        jMenu6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jMenu6.setFont(new java.awt.Font("Segoe UI", 1, 14));
         jMenu6.setMargin(new java.awt.Insets(0, 5, 0, 30));
         jMenu6.setMaximumSize(new java.awt.Dimension(237, 32767));
         jMenu6.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -123,9 +116,8 @@ public class adminHome extends javax.swing.JFrame {
         });
         jMenuBar1.add(jMenu6);
 
-        jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Close.png"))); // NOI18N
-        jMenu7.setText("Exit");
-        jMenu7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jMenu7.setText("Close");
+        jMenu7.setFont(new java.awt.Font("Segoe UI", 1, 14));
         jMenu7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jMenu7MouseClicked(evt);
@@ -145,104 +137,99 @@ public class adminHome extends javax.swing.JFrame {
 
     private void jMenu6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu6MouseClicked
         // TODO add your handling code here:
-        
-        JFrame jf = new JFrame() ; 
-        
+
+        JFrame jf = new JFrame();
+
         jf.setAlwaysOnTop(true);
-        
-        int a = JOptionPane.showConfirmDialog(jf, "Do you really want to Logout","Select",JOptionPane.YES_NO_OPTION) ;
-        
-        if(a==0){
+
+        int a = JOptionPane.showConfirmDialog(jf, "Do you really want to Logout", "Select", JOptionPane.YES_NO_OPTION);
+
+        if (a == 0) {
             setVisible(false);
             new loginAdmin().setVisible(true);
         }
-        
-        
+
+
     }//GEN-LAST:event_jMenu6MouseClicked
 
     private void jMenu7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu7MouseClicked
         // TODO add your handling code here:
-        
-          JFrame jf = new JFrame() ; 
-        
+
+        JFrame jf = new JFrame();
+
         jf.setAlwaysOnTop(true);
-        
-        int a = JOptionPane.showConfirmDialog(jf, "Do you really want to Exit Application","Select",JOptionPane.YES_NO_OPTION) ;
-        
-        if(a==0){
+
+        int a = JOptionPane.showConfirmDialog(jf, "Do you really want to Exit Application", "Select", JOptionPane.YES_NO_OPTION);
+
+        if (a == 0) {
             System.exit(0);
         }
     }//GEN-LAST:event_jMenu7MouseClicked
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
         // TODO add your handling code here:
-        
-        
+
+
     }//GEN-LAST:event_jMenu1ActionPerformed
 
     private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
         // TODO add your handling code here:
-        
-        if(open== 0){
+
+        if (open == 0) {
             new addNewQuestion().setVisible(true);
-            open = 1 ;
-        }else{
-            JFrame jf = new JFrame() ;
+            open = 1;
+        } else {
+            JFrame jf = new JFrame();
             jf.setVisible(true);
             JOptionPane.showMessageDialog(jf, "One form is allready Open");
         }
-        
+
     }//GEN-LAST:event_jMenu1MouseClicked
 
     private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
         // TODO add your handling code here:
-        
-        if(open== 0){
+
+        if (open == 0) {
             new updateQuestion().setVisible(true);
-            open = 1 ;
-        }else{
-            JFrame jf = new JFrame() ;
+            open = 1;
+        } else {
+            JFrame jf = new JFrame();
             jf.setVisible(true);
             JOptionPane.showMessageDialog(jf, "One form is allready Open");
         }
-        
-        
-        
-        
-        
-        
+
+
     }//GEN-LAST:event_jMenu2MouseClicked
 
     private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
         // TODO add your handling code here:
-        
-        
-         if(open == 0){
+
+
+        if (open == 0) {
             new allQuestion().setVisible(true);
-            open = 1 ;
-        }else{
-            JFrame jf = new JFrame() ;
+            open = 1;
+        } else {
+            JFrame jf = new JFrame();
             jf.setVisible(true);
             JOptionPane.showMessageDialog(jf, "One form is allready Open");
         }
-        
-        
+
+
     }//GEN-LAST:event_jMenu3MouseClicked
 
     private void jMenu4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu4MouseClicked
         // TODO add your handling code here:
-        
-         if(open== 0){
-            new  deleteQuestion().setVisible(true);
-            open = 1 ;
-        }else{
-            JFrame jf = new JFrame() ;
+
+        if (open == 0) {
+            new deleteQuestion().setVisible(true);
+            open = 1;
+        } else {
+            JFrame jf = new JFrame();
             jf.setVisible(true);
             JOptionPane.showMessageDialog(jf, "One form is allready Open");
         }
-        
-        
-        
+
+
     }//GEN-LAST:event_jMenu4MouseClicked
 
     private void jMenu7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu7ActionPerformed
@@ -251,17 +238,17 @@ public class adminHome extends javax.swing.JFrame {
 
     private void jMenu5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu5MouseClicked
         // TODO add your handling code here:
-        
-         if(open== 0){
-            new  allStudentResult().setVisible(true);
-            open = 1 ;
-        }else{
-            JFrame jf = new JFrame() ;
+
+        if (open == 0) {
+            new allStudentResult().setVisible(true);
+            open = 1;
+        } else {
+            JFrame jf = new JFrame();
             jf.setVisible(true);
             JOptionPane.showMessageDialog(jf, "One form is allready Open");
         }
-        
-        
+
+
     }//GEN-LAST:event_jMenu5MouseClicked
 
     /**
@@ -271,7 +258,7 @@ public class adminHome extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

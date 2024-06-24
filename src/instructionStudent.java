@@ -5,7 +5,7 @@
 
 /**
  *
- * @author daulw
+ * @author geekers donald 237
  */
 public class instructionStudent extends javax.swing.JFrame {
 

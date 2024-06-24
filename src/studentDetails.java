@@ -1,8 +1,7 @@
 import java.sql.* ;
-import Project.ConnectionProvider ;
+import Project.DatabaseConnection;
 import java.util.Date ;
 import java.text.SimpleDateFormat ;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /*
@@ -12,7 +11,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author daulw
+ * @author geekers donald 237
  */
 public class studentDetails extends javax.swing.JFrame {
 
@@ -155,7 +154,7 @@ public class studentDetails extends javax.swing.JFrame {
            String marks = "0" ;
            
            try{
-               Connection con = ConnectionProvider.getCon() ;
+               Connection con = DatabaseConnection.getCon() ;
                PreparedStatement ps = con.prepareStatement("insert into students value(?,?,?,?)") ;
                ps.setString(1, rollNo);
                 ps.setString(2, name);

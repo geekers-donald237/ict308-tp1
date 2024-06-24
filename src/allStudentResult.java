@@ -1,5 +1,4 @@
-import java.sql.Array.* ;
-import Project.ConnectionProvider ;
+import Project.DatabaseConnection;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -14,7 +13,7 @@ import net.proteanit.sql.DbUtils;
 
 /**
  *
- * @author daulw
+ * @author geekers donald 237
  */
 public class allStudentResult extends javax.swing.JFrame {
 
@@ -26,7 +25,7 @@ public class allStudentResult extends javax.swing.JFrame {
         
         
           try{
-            Connection con = ConnectionProvider.getCon();
+            Connection con = DatabaseConnection.getCon();
             Statement st =con.createStatement();
             ResultSet rs = st.executeQuery("select * from students") ;
             
@@ -139,7 +138,7 @@ public class allStudentResult extends javax.swing.JFrame {
              
              
                 try{
-            Connection con = ConnectionProvider.getCon();
+            Connection con = DatabaseConnection.getCon();
             Statement st =con.createStatement();
             ResultSet rs = st.executeQuery("select * from students where marks>="+marks+"") ;
             
